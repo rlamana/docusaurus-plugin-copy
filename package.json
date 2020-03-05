@@ -1,0 +1,28 @@
+{
+  "name": "docusaurus-plugin-copy",
+  "version": "0.1.0",
+  "description": "Copy assets from source tree to the same path in the output directory",
+  "main": "docusaurus-plugin-copy.js",
+  "dependencies": {
+    "copy-webpack-plugin": "^5.1.1"
+  },
+  "peerDependencies": {
+    "@docusaurus/core": "^2.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "homepage": "https://github.com/rlamana/docusaurus-plugin-copy",
+  "keywords": [
+    "docusaurus",
+    "docusaurus-plugin",
+    "copy",
+    "assets"
+  ],
+  "author": "rlamana",
+  "license": "MIT",
+  "readme": "README.md",
+  "bugs": {
+    "url": "https://github.com/rlamana/docusaurus-plugin-copy/issues"
+  }
+}
