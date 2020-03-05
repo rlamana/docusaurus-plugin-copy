@@ -1,6 +1,6 @@
-# `docusaurus-plugin-copy`
+# docusaurus-plugin-copy
 
-Copy assets from source tree to the same path in the output directory
+Copy assets from source tree to the same path in the output directory.
 
 ## Installation
 
