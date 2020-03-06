@@ -4,6 +4,7 @@ const CopyPlugin = require('copy-webpack-plugin');
 module.exports = function(context, opts) {
   const DEFAULT_OPTIONS = {
     include: ['**/*.{png,jpg,jpeg,svg}'],
+    context: '',
     path: 'docs'
   };
 
@@ -23,10 +24,14 @@ module.exports = function(context, opts) {
     },
 
     configureWebpack() {
+      const { context } = options;
       return {
         plugins: [
           new CopyPlugin(patterns.map(pattern => {
-            return { from: pattern };
+            return {
+              from: pattern,
+              context
+            };
           }))
         ]
       };

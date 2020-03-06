@@ -1,6 +1,6 @@
 {
   "name": "docusaurus-plugin-copy",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Copy assets from source tree to the same path in the output directory",
   "main": "docusaurus-plugin-copy.js",
   "dependencies": {
