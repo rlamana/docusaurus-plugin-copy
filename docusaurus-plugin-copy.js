@@ -1,5 +1,4 @@
 const path = require('path');
-const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = function(context, opts) {
   const DEFAULT_OPTIONS = {
@@ -23,8 +22,12 @@ module.exports = function(context, opts) {
       return [...patterns];
     },
 
-    configureWebpack() {
+    configureWebpack(_config, _isServer, { currentBundler }) {
       const { context } = options;
+      const CopyPlugin =
+        currentBundler?.name === 'rspack'
+          ? currentBundler.instance.CopyRspackPlugin
+          : require('copy-webpack-plugin');
       return {
         plugins: [
           new CopyPlugin(patterns.map(pattern => {
