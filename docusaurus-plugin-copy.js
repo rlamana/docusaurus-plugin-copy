@@ -27,12 +27,14 @@ module.exports = function(context, opts) {
       const { context } = options;
       return {
         plugins: [
-          new CopyPlugin(patterns.map(pattern => {
-            return {
-              from: pattern,
-              context
-            };
-          }))
+          new CopyPlugin({
+            patterns: patterns.map(pattern => {
+              return {
+                from: pattern,
+                context
+              };
+            })
+          })
         ]
       };
     }
